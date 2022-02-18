@@ -1,0 +1,1 @@
+(()=>{"use strict";(()=>{const e=document.querySelector(".header-modal"),o=document.querySelector(".btn-warning");o.addEventListener("click",(()=>{console.log("click")})),console.log(e),console.log(o)})(),console.log("my slider")})();
