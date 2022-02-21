@@ -1,14 +1,22 @@
 
 const modalModule = () => {
-    const modal = document.querySelector('.header-modal');
-    const btn = document.querySelector('.btn-warning');
+    const body = document.querySelector('body');
+    const overlay = document.querySelector('.overlay')
+    const modal = document.querySelector('.header-modal')
 
-    btn.addEventListener('click', () =>{
-        console.log('click');
+    body.addEventListener('click', (e) => {
+        if (e.target.classList.contains('btn-warning')){
+         
+         modal.style.display = 'flex'
+         overlay.style.display = 'flex'
+        }
+        if (e.target.classList.contains('header-modal__close')){
+         
+            modal.style.display = 'none'
+            overlay.style.display = 'none'
+           }
     })
 
-   console.log(modal);
-   console.log(btn);
-   
+    
 }
 export default modalModule
